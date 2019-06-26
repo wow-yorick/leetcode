@@ -6,7 +6,7 @@ import (
 	"unicode"
 )
 
-func main() {
+func main_2() {
 	isPalindrome("race a car")
 	//fmt.Printf("is eq %v", 'e' == 'a')
 }

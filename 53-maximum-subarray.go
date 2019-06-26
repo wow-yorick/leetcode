@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main_11() {
 	n := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
 	r := maxSubArray(n)
 	fmt.Printf("the result: %d", r)

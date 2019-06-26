@@ -25,5 +25,5 @@ func isMIrror(t1, t2 *TreeNode) bool {
 	if t1 == nil || t2 == nil {
 		return false
 	}
-	return (t1.Val == t2.Val) && isMIrror(t1.Right, t2.Left) && isMIrror(t1.Left, t2.right)
+	return (t1.Val == t2.Val) && isMIrror(t1.Right, t2.Left) && isMIrror(t1.Left, t2.Right)
 }

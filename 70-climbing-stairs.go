@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main_14() {
 	climbStairsFail(2)
 	//climbStairs(2)
 	//climbStairs(10)

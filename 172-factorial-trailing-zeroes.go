@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func main() {
+func main_5() {
 	// 	ret := trailingZeroes(42)
 	// 	println(ret)
 	str := "Hello,世界"
@@ -13,7 +13,7 @@ func main() {
 	for _, ch1 := range str {
 		fmt.Printf("%q \n", ch1) //单引号围绕的字符字面值，由go语法安全的转义
 	}
-	fmt.Println("==========>方法二\n")
+	fmt.Println("==========>方法二")
 	//方法二：转化输出格式
 	for _, ch2 := range str {
 		fmt.Printf("%s", reflect.TypeOf(ch2))

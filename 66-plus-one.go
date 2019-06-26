@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main_12() {
 	ret := plusOne([]int{1, 2, 3, 9})
 	fmt.Printf("ret %v", ret)
 }

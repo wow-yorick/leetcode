@@ -58,7 +58,7 @@ func titleToNumberLimit(s string) int {
 	return -1
 }
 
-func main() {
+func main_3() {
 	r := titleToNumber("BB")
 	fmt.Printf("aa index is %d", r)
 }

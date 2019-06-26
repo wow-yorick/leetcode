@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main_13() {
 	x := 4
 	y := mySqrt(x)
 
