@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main_16() {
 	arr := []int{2, 7, 11, 15}
 	ret := twoSum(arr, 9)
 	fmt.Printf("the result is: %v", ret)
