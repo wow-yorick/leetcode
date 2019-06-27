@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func main_15() {
 	n := countPrimes(10)
 	fmt.Printf("xx:%v", n)
 }
