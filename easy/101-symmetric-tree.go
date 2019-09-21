@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
@@ -15,6 +17,7 @@ type TreeNode struct {
  * }
  */
 func isSymmetric(root *TreeNode) bool {
+	fmt.Sprint("x")
 	return isMIrror(root, root)
 }
 
