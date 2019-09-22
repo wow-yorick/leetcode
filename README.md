@@ -1,3 +1,3 @@
-https://github.com/<OWNER>/<REPOSITORY>/workflows/<WORKFLOW_NAME>/badge.svg
+![](https://github.com/actions/hello-world/workflows/.github/workflows/main.yml/badge.svg)
 # leetcode
 学习算法
