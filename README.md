@@ -1,3 +1,3 @@
-![](https://github.com/actions/hello-world/workflows/.github/workflows/main.yml/badge.svg)
+![](https://github.com/wow-yorick/leetcode/workflows/.github/workflows/go.yml/badge.svg)
 # leetcode
 学习算法
