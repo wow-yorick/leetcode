@@ -1,14 +1,14 @@
 package medium
 
 func searchRange(nums []int, target int) []int {
-	targetRange := []int{-1,-1}
+	targetRange := []int{-1, -1}
 	leftIdx := extremeInsertionIndex(nums, target, true)
 
 	if leftIdx == len(nums) || nums[leftIdx] != target {
 		return targetRange
 	}
 	targetRange[0] = leftIdx
-	targetRange[1] = extremeInsertionIndex(nums,target, false) -1
+	targetRange[1] = extremeInsertionIndex(nums, target, false) - 1
 	return targetRange
 
 }
@@ -20,12 +20,13 @@ func extremeInsertionIndex(nums []int, target int, left bool) int {
 	)
 
 	for lo < hi {
-		mid := (lo + hi)/2
-		if nums[mid] > target || (left &&  target == nums[mid]) {
+		mid := (lo + hi) / 2
+		if nums[mid] > target || (left && target == nums[mid]) {
 			hi = mid
 		} else {
-			lo = mid +1
+			lo = mid + 1
 		}
 	}
+	return 0
 
 }
