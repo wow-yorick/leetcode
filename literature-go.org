@@ -1,0 +1,73 @@
+C-c C-v v 查看扩展代码
+C-c C-c 执行
+#+BEGIN_SRC go :imports "fmt"
+fmt.Println("hello,org-mode tomorrow")
+#+END_SRC
+
+#+RESULTS:
+: hello,org-mode tomorrow
+
+go语言特定头文件
+:args: 传递命令行参数到代码编译后的可执行文件，传递超过多参数，需要使用 list 。
+:flags: 传递给 go run 或者 go build 的flags(未使用成功)。
+:main: 若没设置 no ， 代码将会被包裹在 main 函数中。默认 yes 。
+:imports: 为代码提供 imports 的快捷支持。 当处理 main 函数时，应该使用这个选项。 要 import 多个包，请使用 list 。
+:package: 设置当前代码块 tangle 时的包名。 需要： :main no 。 若没设置，同时代码中没有包名声明， main 包将被声明。
+:var: ob-go 支持 Babel 的变量，不过目前还不完备。
+
+#+NAME: 导入多个包
+#+BEGIN_SRC go :imports '("fmt" "time")
+  fmt.Println("当前时间：", time.Now())
+#+END_SRC
+
+#+RESULTS:
+: 当前时间： 2019-09-21 22:24:45.194770291 +0800 AWST m=+0.000077246
+
+#+NAME: 命令行参数传递
+#+BEGIN_SRC go :imports '("fmt" "os") :args '("bable" "golang")
+  fmt.Println(os.Args[1], os.Args[2])
+#+END_SRC
+
+#+RESULTS:
+: bable golang
+
+#+NAME: sum 多入参
+#+BEGIN_SRC go :imports "fmt" :var a=12 b=13
+  fmt.Println(a+b)
+#+END_SRC
+
+#+RESULTS:
+: 25
+
+#+call: sum(a=22,b=23)
+
+#+RESULTS:
+: 45
+
+#+NAME: min 代码组织
+#+BEGIN_SRC  go
+  func min(a, b int) int {
+    if a > b {
+      return b
+    } else {
+      return a
+    }
+  }
+#+END_SRC
+
+#+RESULTS: min 代码组织
+
+#+NAME: get-min
+#+BEGIN_SRC go :var a=0 b=0 :imports "fmt" :noweb strip-export
+  <<min>>
+
+  func main() {
+    fmt.Println(min(a,b))
+  }
+#+END_SRC
+
+#+RESULTS: get-min
+
+#+call: get-min(27, 23)
+
+#+RESULTS:
